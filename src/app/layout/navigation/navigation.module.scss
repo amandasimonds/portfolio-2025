@@ -1,0 +1,110 @@
+@use '../../styles/variables.scss' as *;
+
+.navigation {
+    --navigation-bar-height: 72px;
+
+    background-color: var(--color-primary-dark);
+    color: var(--color-text-inverted);
+    height: var(--navigation-bar-height);
+    width: 100%;
+    padding: 8px 24px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: sticky;
+    top: 0;
+    box-shadow: var(--box-shadow);
+
+    a {
+        font-weight: 600;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+
+    &__button-mobile {
+        display: none;
+
+        @media screen and (max-width: $tablet-screen-width-max) {
+            display: flex;
+        }
+    }
+
+    @media screen and (max-width: $mobile-screen-width-max) {
+        --navigation-bar-height: auto;
+        padding: 8px 16px;
+
+        .cta {
+            font-size: 14px;
+        }
+    }
+}
+
+.links {
+    display: flex;
+    gap: 16px;
+    flex: 1;
+    justify-content: flex-end;
+
+    .close {
+        display: none;
+    }
+}
+
+@media screen and (max-width: $tablet-screen-width-max) {
+    .links {
+        position: fixed;
+        right: -400px;
+        transition: all .5s;
+        top: 0;
+        display: flex;
+        flex-direction: column;
+        padding: 20px 24px;
+        justify-content: flex-start;
+        height: 100%;
+        background-color: var(--color-primary-dark);
+        box-shadow: var(--box-shadow);
+        width: 200px;
+
+        a {
+            height: 40px;
+            display: flex;
+            align-items: center;
+            font-size: 18px;
+        }
+
+        .close {
+            display: flex;
+            justify-content: flex-end;
+        }
+    }
+
+    .links--show {
+        right: 0;
+        transition: all .5s;
+    }
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    cursor: pointer;
+
+    &__text {
+        display: flex;
+        flex-direction: column;
+        font-size: 11px;
+        line-height: 12px;
+
+        @media screen and (min-width: $tablet-screen-width-min) {
+            font-size: 14px;
+            line-height: 16px;
+        }
+    }
+
+    @media screen and (min-width: $desktop-screen-width-min) {
+        flex: 1;
+    }
+}

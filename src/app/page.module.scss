@@ -1,10 +1,6 @@
-.page {
+.page {}
 
-}
-
-.main {
-
-}
+.main {}
 
 .main ol {
   font-family: var(--font-geist-mono);
@@ -33,20 +29,19 @@
   gap: 16px;
 }
 
-.ctas a {
+.ctas a {}
 
-}
+a.primary {}
 
-a.primary {
-
-}
-
-a.secondary {
-
-}
+a.secondary {}
 
 .footer {
-
+  padding: 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+  flex-direction: column;
 }
 
 /* Enable hover only on non-touch devices */

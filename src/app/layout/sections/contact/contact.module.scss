@@ -1,0 +1,31 @@
+@use '../../../styles/variables' as *;
+
+.contact {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    text-align: center;
+
+    &__header {
+        padding: 24px;
+    }
+
+    &__content {
+        padding: 24px 16px;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 16px;
+    }
+
+    &__text {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+        align-items: center;
+        text-align: center;
+        max-width: 800px;
+    }
+}

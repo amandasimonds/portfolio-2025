@@ -1,0 +1,65 @@
+@use '../../../styles/variables.scss' as *;
+
+.header {
+    display: flex;
+    background-color: var(--color-bg-light);
+    padding: 24px;
+    align-items: center;
+    justify-content: center;
+
+    @media screen and (max-width: $mobile-screen-width-max) {
+        padding: 16px;
+        flex-direction: column;
+    }
+
+    &__text {
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+        align-items: flex-end;
+        text-align: right;
+        padding: 16px;
+
+        h1 {
+            display: flex;
+            flex-direction: column;
+
+            &.visually-hidden {
+                width: 1px;
+                height: 1px;
+                padding: 0;
+                overflow: hidden;
+                clip: rect(0, 0, 0, 0);
+                white-space: nowrap;
+                border: 0;
+            }
+        }
+
+        @media screen and (max-width: $tablet-screen-width-max) {
+            width: 65%;
+        }
+
+        @media screen and (max-width: $mobile-screen-width-max) {
+            padding: 0 0 16px;
+            width: 100%;
+            align-items: center;
+            text-align: center;
+        }
+    }
+
+    &__image {
+
+        &__desktop {
+            @media screen and (max-width: $mobile-screen-width-max) {
+                display: none;
+            }
+        }
+
+        &__mobile {
+            @media screen and (min-width: $tablet-screen-width-min) {
+                display: none;
+            }
+        }
+    }
+}
