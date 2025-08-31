@@ -1,0 +1,76 @@
+@use '../../../styles/variables' as *;
+
+.work {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    background-color: var(--color-bg-dark);
+    padding: 24px;
+    gap: 24px;
+
+    &__header {
+        padding: 24px;
+    }
+
+    &__card {
+        width: 350px;
+
+        @media screen and (max-width: $mobile-screen-width-max) {
+            width: 100%;
+        }
+    }
+
+    &__content {
+        display: flex;
+        width: 100%;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 24px;
+
+        h4 {
+            color: var(--color-highlight);
+            transition: all 0.3s;
+
+            &:hover {
+                transform: translateY(-2px);
+            }
+
+            a {
+                display: flex;
+                align-items: center;
+                gap: 4px;
+            }
+        }
+
+        .links {
+            display: flex;
+            gap: 8px;
+            margin-top: 8px;
+
+            a {
+                font-size: 14px;
+                background-color: var(--color-bg-dark);
+                border: 1px solid var(--color-border);
+                padding: 4px 8px;
+                border-radius: 4px;
+                transition: all 0.3s;
+
+                &:hover {
+                    background-color: var(--color-highlight);
+                    color: var(--color-text-inverted);
+                    border-color: var(--color-highlight);
+                }
+            }
+        }
+    }
+
+    &__text {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+        align-items: center;
+        text-align: center;
+        max-width: 800px;
+    }
+}

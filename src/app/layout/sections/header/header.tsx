@@ -15,6 +15,9 @@ export default function Header() {
                         <img src="portrait.png" alt="" />
                     </div>
                     <p>I build and design exceptional user interfaces, that combine thoughtful engineering with robust UIUX.</p>
+                    <div className="icons">
+                        <i className="fa-brands fa-github"></i>
+                    </div>
 
                 </div>
                 <div className={`${styles.header__image} ${styles.header__image__desktop}`}>
