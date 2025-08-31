@@ -10,7 +10,7 @@ export default function Header() {
         <div className={styles.header} id="home">
             <div className={styles.header__content}>
                 <div className={styles.header__text}>
-                    <h1>Hi! I'm Amanda</h1>
+                    <h1>Hi! I&apos;m Amanda</h1>
                     <span className="header-subtitle subtitle accent">UI/UX Designer & Developer</span>
                     <div className={styles.header__image__mobile}>
                         <img src="portrait.png" alt="" />
