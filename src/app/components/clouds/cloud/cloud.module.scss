@@ -1,0 +1,16 @@
+.cloudsBg {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+
+  img {
+    position: absolute;
+    animation: cloud-bobble 6s ease-in-out infinite alternate;
+  }
+}
+
+@keyframes cloud-bobble {
+  0% { transform: translateY(0); }
+  100% { transform: translateY(20px); }
+}

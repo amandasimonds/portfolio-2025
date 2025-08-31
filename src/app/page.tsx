@@ -5,16 +5,24 @@ import Experience from "./layout/sections/experience/experience";
 import Contact from "./layout/sections/contact/contact";
 import Header from "./layout/sections/header/header";
 import styles from "./page.module.scss";
+import { Open_Sans } from "next/font/google";
+import CloudBackground from "./components/clouds/cloud-background/cloud-background";
+
+  const openSans = Open_Sans({
+  subsets: ["latin"],
+  weight: ["300", "800"],
+});
 
 export default function Home() {
 
   return (
     <div className={styles.page}>
-      <Navigation></Navigation>
-      <main className={styles.main}>
-        <Header></Header>
-        <Experience></Experience>
-        <Contact></Contact>
+      <CloudBackground />
+      <Navigation />
+      <main className={`${styles.main} ${openSans.className}`}>
+        <Header />
+        <Experience />
+        <Contact />
       </main>
       <footer className={styles.footer}>
         <span className="subtitle">Amanda Simonds Brannock</span>
