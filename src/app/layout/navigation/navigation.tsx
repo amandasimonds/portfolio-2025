@@ -14,8 +14,8 @@ import { Rubik } from "next/font/google";
 export default function Navigation() {
   const navLinks = [
     { link: "about", label: "about" },
-    { link: "work", label: "work" },
     { link: "experience", label: "experience" },
+    { link: "work", label: "work" },
     { link: "contact", label: "contact" },
     { link: "resume", label: "resume" }
   ];

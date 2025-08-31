@@ -45,6 +45,7 @@
             object-fit: cover;
             display: block;
             transition: all 0.3s ease-in-out;
+            object-position: top;
             filter: brightness(0.6); // Lower brightness to 70%
         }
     }

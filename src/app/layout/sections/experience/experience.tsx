@@ -1,6 +1,55 @@
 import styles from "./experience.module.scss";
 import React from "react";
 
+const experience = [
+    {
+        length: "September 2023 - Present | 2 yrs",
+        positions: [
+            {
+                position: "UI/UX Designer & Developer",
+                length: "September 2023 — Present",
+                description: "Design and development of features for a modernized crew employee portal. Working in an Agile environment, collaborating with cross-functional teams to deliver user-centric solutions that enhance the overall experience for United Airlines crew members.",
+                skills: [
+                    "Angular",
+                    "SCSS",
+                    "Figma",
+                ]
+            },
+        ],
+        company: "United Airlines",
+        link: "united.com",
+    },
+    {
+        length: "October 2020 — May 2023 | 2 yrs 8 mos",
+        positions: [
+            {
+                position: "UI/UX Designer & Developer",
+                length: "April 2021 — May 2023",
+                description: "Design and development of features for a modernized crew employee portal. Working in an Agile environment, collaborating with cross-functional teams to deliver user-centric solutions that enhance the overall experience for United Airlines crew members.",
+                skills: [
+                    "Angular",
+                    "AWS",
+                    "SCSS",
+                    "Figma",
+                ]
+            },
+            {
+                position: "QA Test Engineer",
+                length: "October 2020 — April 2021",
+                description: "Design and development of features for a modernized crew employee portal. Working in an Agile environment, collaborating with cross-functional teams to deliver user-centric solutions that enhance the overall experience for United Airlines crew members.",
+                skills: [
+                    "Angular",
+                    "AWS",
+                    "Cypress"
+                ]
+            },
+        ],
+        company: "S&P Global",
+        link: "spgglobal.com",
+    },
+];
+
+
 export default function Experience() {
 
     return (
@@ -9,9 +58,29 @@ export default function Experience() {
                 <h2>Experience</h2>
             </div>
             <div className={styles.experience__content}>
-                <div className={styles.experience__item}>
-                        
-                </div>
+                {experience.map((item, idx) => (
+                    <div key={idx} className={styles.experience__item}>
+                        <span className={styles.heading}>
+                            <h3><a href={`https://${item.link}`} target="_blank" rel="noopener noreferrer" className="highlight">{item.company}</a></h3>
+                            <span className={styles.experience__length}>{item.length}</span>
+                        </span>
+
+                        {item.positions.map((position, posIdx) => (
+                            <div key={posIdx} className={styles.experience__position}>
+                                <h4 className="font-bold">{position.position}</h4>
+                                {item.positions.length > 1 &&
+                                    <span className={styles.experience__positionLength}>{position.length}</span>
+                                }
+                                <p>{position.description}</p>
+                                <div className={styles.experience__skills}>
+                                    {position.skills.map((skill, skillIndex) => (
+                                        <span key={skillIndex} className="chip">{skill}</span>
+                                    ))}
+                                </div>
+                            </div>
+                        ))}
+                    </div>
+                ))}
             </div>
         </div>
     )

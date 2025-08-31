@@ -1,5 +1,6 @@
 'use client'
 
+import { scrollToSection } from "@/app/utils/utils";
 import styles from "./header.module.scss";
 import React from "react";
 
@@ -24,7 +25,10 @@ export default function Header() {
                     <img src="portrait.png" alt="" />
                 </div>
             </div>
-            <button>See my work</button>
+            <div className={styles.header__ctas}>
+                <button onClick={() => scrollToSection("work")}>See my work</button>
+                <button onClick={() => scrollToSection("contact")}>Contact me</button>
+            </div>
         </div>
     )
 }

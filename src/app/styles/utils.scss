@@ -1,3 +1,11 @@
 .cursor-pointer {
     cursor: pointer;
 }
+
+.highlight {
+  color: var(--color-highlight);
+}
+
+.font-bold {
+    font-weight: var(--font-weight-bold);
+}

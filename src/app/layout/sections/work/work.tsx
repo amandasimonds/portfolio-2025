@@ -1,7 +1,6 @@
 import Card from "@/app/components/card/card";
 import styles from "./work.module.scss";
 import React from "react";
-import { link } from "fs";
 
 const projects = [
     {
@@ -51,7 +50,7 @@ export default function Work() {
 
     return (
         <div className={styles.work} id="work">
-            <h2>Work</h2>
+            <h2 className={styles.work__header}>Work</h2>
             <div className={styles.work__content}>
                 {projects.map((project, idx) => (
                     <Card key={idx} className={styles.work__card} image={project.img} imageAlt={project.title}>

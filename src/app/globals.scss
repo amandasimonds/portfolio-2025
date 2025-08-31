@@ -174,3 +174,11 @@ button {
 li {
   margin-left: 24px;
 }
+
+.chip {
+  background-color: var(--color-bg-light);
+  border-radius: 4px;
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-accent);
+  padding: 4px 8px;
+}

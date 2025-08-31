@@ -8,6 +8,7 @@ import styles from "./page.module.scss";
 import { Open_Sans } from "next/font/google";
 import CloudBackground from "./components/clouds/cloud-background/cloud-background";
 import Work from "./layout/sections/work/work";
+import About from "./layout/sections/about/about";
 
   const openSans = Open_Sans({
   subsets: ["latin"],
@@ -22,8 +23,9 @@ export default function Home() {
       <Navigation />
       <main className={`${styles.main} ${openSans.className}`}>
         <Header />
-        <Work />
         <Experience />
+        <Work />
+        <About />
         <Contact />
       </main>
       <footer className={styles.footer}>
