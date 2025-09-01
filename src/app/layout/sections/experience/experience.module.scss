@@ -29,7 +29,7 @@
         align-items: center;
         gap: 48px;
         // background-color: var(--color-primary-10);
-        @include glassPaneBgEffect(80px, 40px);
+        // @include glassPaneBgEffect(80px, 40px);
     }
 
     &__text {
