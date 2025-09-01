@@ -6,7 +6,7 @@ import Scrim from "@/app/components/scrim/scrim";
 import { scrollToSection } from "@/app/utils/utils";
 import { Rubik } from "next/font/google";
 
-  const rubik = Rubik({
+const rubik = Rubik({
   subsets: ["latin"],
   weight: ["300", "900"],
 });
@@ -17,7 +17,7 @@ export default function Navigation() {
     { link: "experience", label: "experience" },
     { link: "work", label: "work" },
     { link: "contact", label: "contact" },
-    { link: "resume", label: "resume" }
+    { link: "", extLink: "/AmandaSimondsResume2025.pdf", label: "resume", target: "_blank", rel: "noopener noreferrer" },
   ];
 
   const [navmenuOpen, setNavMenuOpen] = React.useState(false);
@@ -47,7 +47,7 @@ export default function Navigation() {
       <div className={`${styles.links} ${navmenuOpen ? styles["links--show"] : ""}`}>
         <span className={`cursor-pointer ${styles["close"]}`} onClick={toggleNavMenu}><i className="material-icons">close</i></span>
         {navLinks.map(link => (
-          <a key={link.label} onClick={() => handleNavLinkClick(link.link)}>
+          <a key={link.label} onClick={() => handleNavLinkClick(link.link)} target={link.target} rel={link.rel} href={link.extLink}>
             {link.label}
           </a>
         ))}

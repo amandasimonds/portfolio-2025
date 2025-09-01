@@ -10,6 +10,11 @@
     height: 80vh;
     background-color: var(--color-bg-dark);
     padding-block: 120px;
+    padding: 24px;
+
+    @media screen and (max-width: $mobile-screen-width-max) {
+        height: auto;
+    }
 
     &__header {
         padding: 24px;
@@ -18,6 +23,7 @@
     &__content {
         padding: 24px 16px;
         width: 100%;
+        max-width: $max-container-width-small;
         display: flex;
         flex-direction: column;
         align-items: center;

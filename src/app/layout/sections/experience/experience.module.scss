@@ -9,6 +9,10 @@
     height: 75vh;
     // padding: 32px;
 
+    @media screen and (max-width: $mobile-screen-width-max) {
+        height: auto;
+    }
+
     &__header {
         padding: 24px;
     }
