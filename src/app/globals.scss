@@ -2,24 +2,52 @@
 @use './styles/utils.scss' as *;
 
 :root {
-  --color-bg: #0D1C1B;
-  --color-bg-light: #102322;
-  --color-bg-dark: #0A1514;
-  --color-primary: #448E8A;
-  --color-primary-dark: #448E8A;
-  --color-accent: #448E8A;
-  --color-highlight: #3eaca6;
-  --color-text-white: #ffffff;
-  --color-text: #e6e6e6;
-  --color-text-inverted: #1a1a1a;
-  --color-neutral: #BABFB8;
-  --color-neutral-light: #6A776B;
+  --color-primary: var(--color-primary-50);
+  --color-activation: #61c2bc;
+  --color-highlight: #70e1db;
+  --color-activation-hover: var(--color-primary-80);
+
+  --color-primary-80: #BDE0DE;
+  --color-primary-70: #9BCFCC;
+  --color-primary-60: #79BFBB;
+  --color-primary-50: #56AEA9;
+  --color-primary-40: #448E8A;
+  --color-primary-30: #336B68;
+  --color-primary-20: #234846;
+  --color-primary-10: #122625;
+  --color-primary-5: #0A1514;
+
+  --color-neutral-white: #ffffff;
+  --color-neutral: var(--color-neutral-50);
+  --color-neutral-dark: var(--color-neutral-20);
+
+  --color-neutral-90: #f7f9f9;
+  --color-neutral-80: #eef1f1;
+  --color-neutral-70: #cad0d0;
+  --color-neutral-60: #a4a9a9;
+  --color-neutral-50: #7f8383;
+  --color-neutral-40: #5c5f5f;
+  --color-neutral-30: #3c3e3e;
+  --color-neutral-20: #1e1f1f;
+
+  --color-bg: var(--color-primary-10);
+  --color-bg-translucent: rgba(13, 28, 27, 0.5);
+  --color-bg-light: var(--color-primary-10);
+  --color-bg-dark: var(--color-primary-5);
+
+  --color-text-white: var(--color-neutral-white);
+  --color-text: var(--color-neutral-70);
+  --color-text-inverted: var(--color-neutral-dark);
+
+  --gradient-primary-fade: linear-gradient(180deg, var(--color-primary) 0%, transparent 100%);
+
   --font-size-body: 14px;
   --font-weight-medium: 500;
   --font-weight-semibold: 600;
   --font-weight-bold: 700;
-  --box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
   --line-height-body: 20px;
+
+  --box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
 
   @media screen and (max-width: $mobile-screen-width-max) {
     --font-size-body: 14px;
@@ -52,13 +80,14 @@ a {
   color: inherit;
   text-decoration: none;
   cursor: pointer;
+  transition: all 0.3s;
 
   &.link {
-    font-weight: var(--font-weight-bold);
-    color: var(--color-highlight);
+    font-weight: var(--font-weight-semibold);
+    color: var(--color-activation);
 
     &:hover {
-      text-decoration: underline;
+      color: var(--color-activation-hover);
     }
   }
 }
@@ -97,6 +126,7 @@ h2 {
   font-size: 32px;
   line-height: 40px;
   font-weight: var(--font-weight-bold);
+  color: var(--color-neutral-90);
 
   @media screen and (max-width: $tablet-screen-width-max) {
     font-size: 32px;
@@ -108,6 +138,7 @@ h3 {
   font-size: 24px;
   line-height: 32px;
   font-weight: var(--font-weight-medium);
+  color: var(--color-neutral-90);
 
   @media screen and (max-width: $tablet-screen-width-max) {
     font-size: 20px;
@@ -119,7 +150,7 @@ h4 {
   font-size: 20px;
   line-height: 24px;
   font-weight: var(--font-weight-semibold);
-  color: var(--color-text-white);
+  color: var(--color-neutral-90);
 
   @media screen and (max-width: $tablet-screen-width-max) {
     font-size: 18px;
@@ -131,6 +162,7 @@ h5 {
   font-size: 24px;
   line-height: 32px;
   font-weight: var(--font-weight-semibold);
+  color: var(--color-neutral-90);
 
   @media screen and (max-width: $tablet-screen-width-max) {
     font-size: 20px;
@@ -148,9 +180,9 @@ h5 {
 }
 
 button {
-  background-color: var(--color-primary);
+  background-color: var(--color-activation);
   outline: none;
-  color: var(--color-text-inverted);
+  color: var(--color-primary-5);
   padding: 8px 12px;
   border: none;
   font-size: var(--font-size-body);
@@ -159,11 +191,20 @@ button {
   line-height: var(--line-height-body);
   cursor: pointer;
   border-radius: 4px;
+  transition: background-color 0.3s;
+
+  &:hover {
+    background-color: var(--color-activation-hover);
+  }
 
   &.icon-button {
     background-color: transparent;
     box-shadow: none;
     display: flex;
+
+    &--secondary {
+      box-shadow: none;
+    }
   }
 
   a {
@@ -179,6 +220,11 @@ li {
   background-color: var(--color-bg-light);
   border-radius: 4px;
   font-weight: var(--font-weight-semibold);
-  color: var(--color-accent);
+  color: var(--color-primary);
   padding: 4px 8px;
+}
+
+b {
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-neutral-90);
 }

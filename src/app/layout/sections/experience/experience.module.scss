@@ -7,7 +7,7 @@
     width: 100%;
     background-color: var(--color-bg-dark);
     height: 75vh;
-    // padding: 32px;
+    padding: 12px;
 
     @media screen and (max-width: $mobile-screen-width-max) {
         height: auto;
@@ -55,11 +55,34 @@
         flex-direction: column;
         gap: 8px;
         margin-left: 24px;
+        position: relative;
     }
 
     &__skills {
         display: flex;
         gap: 8px;
         flex-wrap: wrap;
+    }
+
+    &__bullet {
+        position: absolute;
+        left: -21px;
+        font-size: 32px;
+        color: var(--color-primary-20)
+    }
+
+    &__multiPosition {
+        &::before {
+            content: '';
+            color: var(--color-highlight);
+            font-size: 24px;
+            line-height: 0;
+            width: 1px;
+            position: absolute;
+            margin-left: -16px;
+            top: 20px;
+            height: calc(100% + -8px);
+            background: var(--color-primary-20);
+        }
     }
 }

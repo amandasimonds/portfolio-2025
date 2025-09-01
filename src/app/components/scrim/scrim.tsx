@@ -7,7 +7,6 @@ type ScrimProps = {
 };
 
 const Scrim: React.FC<ScrimProps> = ({ onClick, isShowing }) => (
-    isShowing &&
     <div className={`${styles.scrim} ${isShowing && styles.visible}`} onClick={onClick}>
     </div>
 )

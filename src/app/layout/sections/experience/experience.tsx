@@ -3,11 +3,11 @@ import React from "react";
 
 const experience = [
     {
-        length: "September 2023 - Present | 2 yrs",
+        length: "Sep 2023 - Present | 2 yrs",
         positions: [
             {
                 position: "UI/UX Designer & Developer",
-                length: "September 2023 — Present",
+                length: "Sep 2023 — Present",
                 description: "Design and development of features for a modernized crew employee portal. Working in an Agile environment, collaborating with cross-functional teams to deliver user-centric solutions that enhance the overall experience for United Airlines crew members.",
                 skills: [
                     "Angular",
@@ -20,11 +20,11 @@ const experience = [
         link: "united.com",
     },
     {
-        length: "October 2020 — May 2023 | 2 yrs 8 mos",
+        length: "Oct 2020 — May 2023 | 2 yrs 8 mos",
         positions: [
             {
                 position: "UI/UX Designer & Developer",
-                length: "April 2021 — May 2023",
+                length: "Apr 2021 — May 2023",
                 description: "Design and development of features for a modernized crew employee portal. Working in an Agile environment, collaborating with cross-functional teams to deliver user-centric solutions that enhance the overall experience for United Airlines crew members.",
                 skills: [
                     "Angular",
@@ -35,7 +35,7 @@ const experience = [
             },
             {
                 position: "QA Test Engineer",
-                length: "October 2020 — April 2021",
+                length: "Oct 2020 — Apr 2021",
                 description: "Design and development of features for a modernized crew employee portal. Working in an Agile environment, collaborating with cross-functional teams to deliver user-centric solutions that enhance the overall experience for United Airlines crew members.",
                 skills: [
                     "Angular",
@@ -67,9 +67,10 @@ export default function Experience() {
 
                         {item.positions.map((position, posIdx) => (
                             <div key={posIdx} className={styles.experience__position}>
-                                <h4 className="font-bold">{position.position}</h4>
+                                <span className={styles.experience__bullet}>&bull;</span>
+                                <h4 className={`${(item.positions.length > 1 && posIdx !== item.positions.length - 1) && styles.experience__multiPosition} font-bold`}>{position.position}</h4>
                                 {item.positions.length > 1 &&
-                                    <span className={styles.experience__positionLength}>{position.length}</span>
+                                    <span>{position.length}</span>
                                 }
                                 <p>{position.description}</p>
                                 <div className={styles.experience__skills}>

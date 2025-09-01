@@ -9,8 +9,7 @@
     height: 80dvh;
     height: 80vh;
     background-color: var(--color-bg-dark);
-    padding-block: 120px;
-    padding: 24px;
+    padding: 24px 24px 120px;
 
     @media screen and (max-width: $mobile-screen-width-max) {
         height: auto;

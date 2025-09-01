@@ -42,7 +42,7 @@ export default function Navigation() {
         </div>
       </a>
       <div className={styles["navigation__button-mobile"]}>
-        <button className={styles["icon-button"]} onClick={toggleNavMenu}><i className="material-icons">menu</i></button>
+        <button className={`icon-button icon-button--secondary`} onClick={toggleNavMenu}><i className="material-icons">menu</i></button>
       </div>
       <div className={`${styles.links} ${navmenuOpen ? styles["links--show"] : ""}`}>
         <span className={`cursor-pointer ${styles["close"]}`} onClick={toggleNavMenu}><i className="material-icons">close</i></span>

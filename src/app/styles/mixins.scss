@@ -1,0 +1,6 @@
+@mixin glassPaneBgEffect($border-radius: 100px, $padding: 20px) {
+  background: var(--color-bg-translucent);
+  backdrop-filter: blur(.7px);
+  border-radius: $border-radius;
+  padding: $padding;
+}

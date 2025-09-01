@@ -29,7 +29,7 @@ export default function Home() {
         <Contact />
       </main>
       <footer className={styles.footer}>
-        <span className="subtitle">Amanda Simonds Brannock</span>
+        <span className={styles.footer__title}>Amanda Simonds Brannock</span>
         <span>
           Copyright &copy; 2025 Amanda Simonds Brannock - All Rights Reserved.
         </span>
