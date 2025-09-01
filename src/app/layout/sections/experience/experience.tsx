@@ -1,3 +1,4 @@
+import Mountain from "@/app/components/mountains/mountains";
 import styles from "./experience.module.scss";
 import React from "react";
 
@@ -54,34 +55,37 @@ export default function Experience() {
 
     return (
         <div className={styles.experience} id="experience">
-            <div className={styles.experience__header}>
-                <h2>Experience</h2>
-            </div>
-            <div className={styles.experience__content}>
-                {experience.map((item, idx) => (
-                    <div key={idx} className={styles.experience__item}>
-                        <span className={styles.heading}>
-                            <h3><a href={`https://${item.link}`} target="_blank" rel="noopener noreferrer" className="highlight">{item.company}</a></h3>
-                            <span className={styles.experience__length}>{item.length}</span>
-                        </span>
+            <Mountain />
+            <div className="content-layer">
+                <div className={styles.experience__header}>
+                    <h2>Experience</h2>
+                </div>
+                <div className={styles.experience__content}>
+                    {experience.map((item, idx) => (
+                        <div key={idx} className={styles.experience__item}>
+                            <span className={styles.heading}>
+                                <h3><a href={`https://${item.link}`} target="_blank" rel="noopener noreferrer" className="highlight">{item.company}</a></h3>
+                                <span className={styles.experience__length}>{item.length}</span>
+                            </span>
 
-                        {item.positions.map((position, posIdx) => (
-                            <div key={posIdx} className={styles.experience__position}>
-                                <span className={styles.experience__bullet}>&bull;</span>
-                                <h4 className={`${(item.positions.length > 1 && posIdx !== item.positions.length - 1) && styles.experience__multiPosition} font-bold`}>{position.position}</h4>
-                                {item.positions.length > 1 &&
-                                    <span>{position.length}</span>
-                                }
-                                <p>{position.description}</p>
-                                <div className={styles.experience__skills}>
-                                    {position.skills.map((skill, skillIndex) => (
-                                        <span key={skillIndex} className="chip">{skill}</span>
-                                    ))}
+                            {item.positions.map((position, posIdx) => (
+                                <div key={posIdx} className={styles.experience__position}>
+                                    <span className={styles.experience__bullet}>&bull;</span>
+                                    <h4 className={`${(item.positions.length > 1 && posIdx !== item.positions.length - 1) && styles.experience__multiPosition} font-bold`}>{position.position}</h4>
+                                    {item.positions.length > 1 &&
+                                        <span>{position.length}</span>
+                                    }
+                                    <p>{position.description}</p>
+                                    <div className={styles.experience__skills}>
+                                        {position.skills.map((skill, skillIndex) => (
+                                            <span key={skillIndex} className="chip">{skill}</span>
+                                        ))}
+                                    </div>
                                 </div>
-                            </div>
-                        ))}
-                    </div>
-                ))}
+                            ))}
+                        </div>
+                    ))}
+                </div>
             </div>
         </div>
     )

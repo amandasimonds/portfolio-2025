@@ -1,3 +1,7 @@
+.main {
+  position: relative;
+}
+
 .footer {
   color: var(--color-neutral-60);
   padding: 64px 24px;
@@ -13,6 +17,4 @@
 }
 
 /* Enable hover only on non-touch devices */
-@media (hover: hover) and (pointer: fine) {
-
-}
+@media (hover: hover) and (pointer: fine) {}

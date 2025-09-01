@@ -1,8 +1,10 @@
-// Example in page.tsx or layout.tsx
+@use '../../../styles/variables' as *;
+
 .cloudsBg {
+    position: relative;
     inset: 0;
     pointer-events: none;
-    z-index: 0;
+    z-index: $z-index-background-layer;
 
     img {
         position: absolute;

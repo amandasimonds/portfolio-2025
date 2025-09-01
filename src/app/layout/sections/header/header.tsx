@@ -8,28 +8,36 @@ export default function Header() {
 
     return (
         <div className={styles.header} id="home">
-            <div className={styles.header__content}>
-                <div className={styles.header__text}>
-                    <h1>Hi! I&apos;m Amanda</h1>
-                    <span className="header-subtitle subtitle accent">UI/UX Designer & Developer</span>
-                    <div className={styles.header__image__mobile}>
+            <div className="content-layer">
+                <div className={styles.header__content}>
+                    <div className={styles.header__text}>
+                        <h1>Hi! I&apos;m Amanda</h1>
+                        <span className="header-subtitle subtitle accent">UI/UX Designer & Developer</span>
+                        <div className={styles.header__image__mobile}>
+                            <img src="portrait.png" alt="" />
+                        </div>
+                        <p className={styles.header__text__caption}>I build and design exceptional user experiences, that combine well-architected engineering with beautifully intuitive designs.</p>
+                        <div className={styles.header__socials}>
+                            <a href="https://github.com/amandasimonds" target="_blank">
+                                <i className="fa-brands fa-github"></i>
+                            </a>
+                            <a href="https://www.linkedin.com/in/amanda-simonds/" target="_blank">
+                                <i className="fa-brands fa-linkedin"></i>
+                            </a>
+                            <a href="/AmandaSimondsResume2025.pdf" target="_blank">
+                                <i className="material-symbols-outlined">demography</i>
+                            </a>
+                        </div>
+
+                    </div>
+                    <div className={`${styles.header__image} ${styles.header__image__desktop}`}>
                         <img src="portrait.png" alt="" />
                     </div>
-                    <p>I build and design exceptional user interfaces, that combine thoughtful engineering with robust UIUX.</p>
-                    <div className={styles.header__socials}>
-                        <i className="fa-brands fa-github"></i>
-                        <i className="fa-brands fa-linkedin"></i>
-                        <i className="material-symbols-outlined">demography</i>
-                    </div>
-
                 </div>
-                <div className={`${styles.header__image} ${styles.header__image__desktop}`}>
-                    <img src="portrait.png" alt="" />
+                <div className={styles.header__ctas}>
+                    <button onClick={() => scrollToSection("work")}>See my work</button>
+                    <button onClick={() => scrollToSection("contact")}>Contact me</button>
                 </div>
-            </div>
-            <div className={styles.header__ctas}>
-                <button onClick={() => scrollToSection("work")}>See my work</button>
-                <button onClick={() => scrollToSection("contact")}>Contact me</button>
             </div>
         </div>
     )

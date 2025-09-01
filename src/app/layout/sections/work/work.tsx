@@ -8,7 +8,7 @@ const projects = [
         link: "https://mowermastersllc.com",
         img: "mower-masters-llc.png",
         description: "React website for a local lawn care business. Designed in Figma and built lightning fast, with SEO to help the business get up and running quickly. After the website went live, Mower Masters was immediately getting calls.",
-         icons: [
+        icons: [
             { icon: "code_blocks", link: "https://react.dev/" },
             { icon: "scss", link: "https://sass-lang.com/" },
             { icon: "figma", link: "https://figma.com/" }
@@ -50,17 +50,19 @@ export default function Work() {
 
     return (
         <div className={styles.work} id="work">
-            <h2 className={styles.work__header}>Work</h2>
-            <div className={styles.work__content}>
-                {projects.map((project, idx) => (
-                    <Card key={idx} className={styles.work__card} image={project.img} imageAlt={project.title}>
-                        <h4><a href={project.link}>{project.title} <i className="material-icons">open_in_new</i></a></h4>
-                        <p>{project.description}</p>
-                        <div className="links">
-                            <i className="material-icons"></i>
-                        </div>
-                    </Card>
-                ))}
+            <div className="content-layer">
+                <h2 className={styles.work__header}>Work</h2>
+                <div className={styles.work__content}>
+                    {projects.map((project, idx) => (
+                        <Card key={idx} className={styles.work__card} image={project.img} imageAlt={project.title}>
+                            <h4><a href={project.link}>{project.title} <i className="material-icons">open_in_new</i></a></h4>
+                            <p>{project.description}</p>
+                            <div className="links">
+                                <i className="material-icons"></i>
+                            </div>
+                        </Card>
+                    ))}
+                </div>
             </div>
         </div>
     )
