@@ -14,14 +14,14 @@ export default function Header() {
                         <h1>Hi! I&apos;m Amanda</h1>
                         <span className="header-subtitle subtitle accent">UI/UX Designer & Developer</span>
                         <div className={styles.header__image__mobile}>
-                            <img src="portrait.png" alt="" />
+                            <img src="portrait.png" alt="amanda simonds brannock ui/ux designer frontend developer" />
                         </div>
                         <p className={styles.header__text__caption}>I build and design exceptional user experiences, that combine well-architected engineering with beautifully intuitive designs.</p>
                         <div className={styles.header__socials}>
                             <a href="https://github.com/amandasimonds" target="_blank">
                                 <i className="fa-brands fa-github"></i>
                             </a>
-                            <a href="https://www.linkedin.com/in/amanda-simonds/" target="_blank">
+                            <a href="https://www.linkedin.com/in/amandasimonds/" target="_blank">
                                 <i className="fa-brands fa-linkedin"></i>
                             </a>
                             <a href="/AmandaSimondsResume2025.pdf" target="_blank">

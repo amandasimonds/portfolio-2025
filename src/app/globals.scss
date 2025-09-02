@@ -32,6 +32,8 @@
 
   --color-bg: var(--color-primary-10);
   --color-bg-translucent: rgba(13, 28, 27, 0.5);
+  --color-bg-translucent-medium: rgba(13, 28, 27, 0.75);
+  --color-bg-dark-translucent: rgb(10, 21, 20, 0.5);
   --color-bg-light: var(--color-primary-10);
   --color-bg-dark: var(--color-primary-5);
 
@@ -62,7 +64,7 @@ html {
 
 body {
   color: var(--color-text);
-  background: var(--color-bg);
+  background: var(--color-bg-dark);
   font-size: var(--font-size-body);
   line-height: var(--line-height-body);
   font-family: Arial, Helvetica, sans-serif;

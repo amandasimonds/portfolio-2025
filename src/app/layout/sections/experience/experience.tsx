@@ -26,7 +26,7 @@ const experience = [
             {
                 position: "UI/UX Designer & Developer",
                 length: "Apr 2021 — May 2023",
-                description: "Design and development of features for a modernized crew employee portal. Working in an Agile environment, collaborating with cross-functional teams to deliver user-centric solutions that enhance the overall experience for United Airlines crew members.",
+                description: "Developed the UI Component library to streamline development and user experience for a data visualization app, using Storybook and Angular. I also worked with designers and product owners to create an Angular prototype that was used for presenting user flow and usability testing with real users. With this testing, we produced hundreds of feedback points on the UIUX of the data platform prototype, before beta release.",
                 skills: [
                     "Angular",
                     "AWS",
@@ -37,7 +37,7 @@ const experience = [
             {
                 position: "QA Test Engineer",
                 length: "Oct 2020 — Apr 2021",
-                description: "Design and development of features for a modernized crew employee portal. Working in an Agile environment, collaborating with cross-functional teams to deliver user-centric solutions that enhance the overall experience for United Airlines crew members.",
+                description: "Researched in greenfield development to produce a framework for developing a large data platform application, using Amazon Web Services and Terraform. Developed infrastructure-as-code structures for setting up S3, Authentication, and testing. Used Cypress for testing Angular applications.",
                 skills: [
                     "Angular",
                     "AWS",

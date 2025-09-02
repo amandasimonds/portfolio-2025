@@ -1,4 +1,5 @@
 @use '../../../styles/variables' as *;
+@use '../../../styles/mixins' as *;
 
 .about {
     display: flex;
@@ -9,10 +10,10 @@
     text-align: center;
     height: 80dvh;
     height: 80vh;
-    background-color: var(--color-bg-dark);
     padding-block: 120px;
     text-align: left;
     padding: 24px;
+    position: relative;
 
     @media screen and (max-width: $mobile-screen-width-max) {
         height: auto;
@@ -22,16 +23,19 @@
         padding: 24px;
         display: flex;
         justify-content: center;
+        @include glassPaneBgEffect($background: var(--color-bg-dark-translucent));
     }
 
     &__content {
-        padding: 24px 16px;
+        padding: 24px;
         width: 100%;
         max-width: $max-container-width-small;
         display: flex;
         flex-direction: column;
         align-items: center;
         gap: 24px;
+        background-color: var(--color-bg-dark);
+        border-radius: 8px;
     }
 
     &__text {

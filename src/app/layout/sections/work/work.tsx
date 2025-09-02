@@ -1,6 +1,7 @@
 import Card from "@/app/components/card/card";
 import styles from "./work.module.scss";
 import React from "react";
+import Branch from "@/app/components/branch/branch";
 
 const projects = [
     {
@@ -50,6 +51,8 @@ export default function Work() {
 
     return (
         <div className={styles.work} id="work">
+            <Branch style={{ left: "16px", top: "-200px" }} />
+            <Branch style={{ right: "16px", top: "200px"}} imageStyles={{ transform: "scaleX(-1)" }} />
             <div className="content-layer">
                 <h2 className={styles.work__header}>Work</h2>
                 <div className={styles.work__content}>
