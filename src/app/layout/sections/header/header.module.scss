@@ -76,6 +76,11 @@
 
     &__image {
 
+        img {
+            width: 200px;
+            border-radius: 100%;
+        }
+
         &__desktop {
             width: 33%;
 

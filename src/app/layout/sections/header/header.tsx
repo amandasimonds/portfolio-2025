@@ -13,8 +13,8 @@ export default function Header() {
                     <div className={styles.header__text}>
                         <h1>Hi! I&apos;m Amanda</h1>
                         <span className="header-subtitle subtitle accent">UI/UX Designer & Developer</span>
-                        <div className={styles.header__image__mobile}>
-                            <img src="portrait.png" alt="amanda simonds brannock ui/ux designer frontend developer" />
+                        <div className={`${styles.header__image} ${styles.header__image__mobile}`}>
+                            <img src="amanda-simonds.jpg" alt="amanda simonds brannock ui/ux designer frontend developer" />
                         </div>
                         <p className={styles.header__text__caption}>I build and design exceptional user experiences, that combine well-architected engineering with beautifully intuitive designs.</p>
                         <div className={styles.header__socials}>
@@ -31,7 +31,7 @@ export default function Header() {
 
                     </div>
                     <div className={`${styles.header__image} ${styles.header__image__desktop}`}>
-                        <img src="portrait.png" alt="" />
+                        <img src="amanda-simonds.jpg" alt="" />
                     </div>
                 </div>
                 <div className={styles.header__ctas}>

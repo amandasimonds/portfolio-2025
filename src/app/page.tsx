@@ -10,7 +10,7 @@ import CloudBackground from "./components/clouds/cloud-background/cloud-backgrou
 import Work from "./layout/sections/work/work";
 import About from "./layout/sections/about/about";
 
-  const openSans = Open_Sans({
+const openSans = Open_Sans({
   subsets: ["latin"],
   weight: ["300", "800"],
 });
