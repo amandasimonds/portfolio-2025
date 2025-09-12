@@ -21,6 +21,15 @@ export default function Navigation() {
   ];
 
   const [navmenuOpen, setNavMenuOpen] = React.useState(false);
+  const [theme, setTheme] = React.useState("september-theme");
+
+  function changeTheme() {
+    setTheme(prev =>
+      prev === "spooky-theme" ? "september-theme" : "spooky-theme"
+    );
+    document.documentElement.setAttribute("data-theme", theme === "spooky-theme" ? "september-theme" : "spooky-theme");
+    console.log(theme);
+  }
 
   function toggleNavMenu() {
     setNavMenuOpen(!navmenuOpen);
@@ -34,13 +43,19 @@ export default function Navigation() {
   return (
     <div className={`${styles.navigation} ${rubik.className}`}>
       <Scrim onClick={toggleNavMenu} isShowing={navmenuOpen}></Scrim>
-      <a onClick={() => handleNavLinkClick('home')} className={styles.logo}>
-        <i><img src="/header-icon.svg" alt="" /></i>
-        <div className={styles.logo__text}>
-          <span>Amanda</span>
-          <span>Simonds</span>
+      <div className={styles.navigation__left}>
+        <a onClick={() => handleNavLinkClick('home')} className={styles.logo}>
+          <i><img src="/header-icon.svg" alt="" /></i>
+          <div className={styles.logo__text}>
+            <span>Amanda</span>
+            <span>Simonds</span>
+          </div>
+        </a>
+        <div className={styles.themeChanger} onClick={changeTheme}>
+          <i className="fa-solid fa-palette"></i>
         </div>
-      </a>
+      </div>
+
       <div className={styles["navigation__button-mobile"]}>
         <button className={`icon-button icon-button--secondary`} onClick={toggleNavMenu}><i className="material-icons">menu</i></button>
       </div>

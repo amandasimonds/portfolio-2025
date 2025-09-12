@@ -1,6 +1,5 @@
 .mountainContainer {
     position: absolute;
-    width: 100%;
     top: -150px;
 }
 
@@ -14,4 +13,5 @@
     height: 330px;
     left: 50%;
     transform: translateX(-50%);
+    color: var(--color-mountains);
 }

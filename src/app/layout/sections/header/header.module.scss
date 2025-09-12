@@ -6,7 +6,7 @@
     flex-direction: column;
     align-items: center;
     gap: 64px;
-    background: linear-gradient(179deg, rgba(0, 0, 0, 0.00) 45.86%, rgba(0, 0, 0, 0.20) 96.16%), #0D1C1B;
+    background: linear-gradient(179deg, rgba(0, 0, 0, 0.00) 45.86%, rgba(0, 0, 0, 0.20) 96.16%), var(--color-bg-secondary);
     padding: 24px;
     padding-right: 32px;
     height: 80dvh;

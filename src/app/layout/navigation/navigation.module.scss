@@ -3,7 +3,7 @@
 .navigation {
     --navigation-bar-height: 72px;
 
-    background-color: var(--color-primary);
+    background-color: var(--color-navigation);
     color: var(--color-text-inverted);
     height: var(--navigation-bar-height);
     width: 100%;
@@ -16,13 +16,18 @@
     box-shadow: var(--box-shadow);
     z-index: $z-index-nav-menu;
 
+    &__left {
+        display: flex;
+        gap: 8px;
+    }
+
     a {
         font-weight: 600;
         font-size: 20px;
         transition: none;
 
         &:hover {
-            color: var(--color-highlight);
+            color: var(--color-primary-30);
         }
     }
 
@@ -52,6 +57,18 @@
 
     .close {
         display: none;
+    }
+}
+
+.themeChanger {
+    cursor: pointer;
+    font-size: 20px;
+    border: 1px solid var(--color-primary-70);
+    padding: 8px;
+    border-radius: 8px;
+
+    &:hover {
+        color: var(--color-primary-30);
     }
 }
 

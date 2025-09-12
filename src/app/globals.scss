@@ -1,60 +1,33 @@
 @use './styles/variables.scss' as *;
 @use './styles/utils.scss' as *;
+@use './styles/themes.scss' as *;
 
 :root {
-  --color-primary: var(--color-primary-50);
-  --color-activation: #61c2bc;
-  --color-highlight: #70e1db;
-  --color-activation-hover: var(--color-primary-80);
+  //colors (default is september theme)
+  @include septemberTheme;
 
-  --color-primary-80: #BDE0DE;
-  --color-primary-70: #9BCFCC;
-  --color-primary-60: #79BFBB;
-  --color-primary-50: #56AEA9;
-  --color-primary-40: #448E8A;
-  --color-primary-30: #336B68;
-  --color-primary-20: #234846;
-  --color-primary-10: #122625;
-  --color-primary-5: #0A1514;
-
-  --color-neutral-white: #ffffff;
-  --color-neutral: var(--color-neutral-50);
-  --color-neutral-dark: var(--color-neutral-20);
-
-  --color-neutral-90: #f7f9f9;
-  --color-neutral-80: #eef1f1;
-  --color-neutral-70: #cad0d0;
-  --color-neutral-60: #a4a9a9;
-  --color-neutral-50: #7f8383;
-  --color-neutral-40: #5c5f5f;
-  --color-neutral-30: #3c3e3e;
-  --color-neutral-20: #1e1f1f;
-
-  --color-bg: var(--color-primary-10);
-  --color-bg-translucent: rgba(13, 28, 27, 0.5);
-  --color-bg-translucent-medium: rgba(13, 28, 27, 0.75);
-  --color-bg-dark-translucent: rgb(10, 21, 20, 0.5);
-  --color-bg-light: var(--color-primary-10);
-  --color-bg-dark: var(--color-primary-5);
-
-  --color-text-white: var(--color-neutral-white);
-  --color-text: var(--color-neutral-70);
-  --color-text-inverted: var(--color-neutral-dark);
-
-  --gradient-primary-fade: linear-gradient(180deg, var(--color-primary) 0%, transparent 100%);
-
+  //font
   --font-size-body: 14px;
   --font-weight-medium: 500;
   --font-weight-semibold: 600;
   --font-weight-bold: 700;
   --line-height-body: 20px;
 
+  //effects
   --box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
 
   @media screen and (max-width: $mobile-screen-width-max) {
     --font-size-body: 14px;
     --line-height-body: 20px;
   }
+}
+
+[data-theme="spooky-theme"] {
+  @include spookyTheme;
+}
+
+[data-theme="september-theme"] {
+  @include septemberTheme;
 }
 
 html {
@@ -184,7 +157,7 @@ h5 {
 button {
   background-color: var(--color-activation);
   outline: none;
-  color: var(--color-primary-5);
+  color: var(--color-text-inverted);
   padding: 8px 12px;
   border: none;
   font-size: var(--font-size-body);
@@ -219,7 +192,7 @@ li {
 }
 
 .chip {
-  background-color: var(--color-bg-light);
+  background-color: var(--color-primary-20);
   border-radius: 4px;
   font-weight: var(--font-weight-semibold);
   color: var(--color-primary);
