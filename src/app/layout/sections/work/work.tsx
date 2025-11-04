@@ -35,13 +35,13 @@ const projects = [
     },
     {
         title: "Aurora Component Library",
-        link: "https://aurora-component-library.netlify.app",
+        link: "https://aurora-ui-kit.netlify.app/",
         img: "aurora-lib.png",
         description: "Angular component library, displayed through Storybook. I used Figma in combination with design tokens and Style Dictionary to create the design system. This is the start of a passion project to learn more about design systems, component libraries, and Storybook."
     },
     {
         title: "Genetic Username",
-        link: "https://genetic-username.netlify.app",
+        link: "https://amandasimonds.github.io/genetic-username/",
         img: "genetic-username.png",
         description: "Username Generator inspired by Reddit, and my desire to do a fun day project building a vanilla JavaScript app."
     },

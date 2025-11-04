@@ -42,6 +42,7 @@ export default function Navigation() {
 
   return (
     <div className={`${styles.navigation} ${rubik.className}`}>
+
       <Scrim onClick={toggleNavMenu} isShowing={navmenuOpen}></Scrim>
       <div className={styles.navigation__left}>
         <a onClick={() => handleNavLinkClick('home')} className={styles.logo}>
@@ -51,22 +52,26 @@ export default function Navigation() {
             <span>Simonds</span>
           </div>
         </a>
+      </div>
+
+      <div className={styles.pinRight}>
         <div className={styles.themeChanger} onClick={changeTheme}>
-          <i className="fa-solid fa-palette"></i>
+          <i className="material-symbols-outlined">brush</i>
+          <i className='material-symbols-outlined'>{theme === "spooky-theme" ? "nightlight" : "nature"}</i>
+        </div>
+        <div className={styles["navigation__button-mobile"]}>
+          <button className={`icon-button icon-button--secondary`} onClick={toggleNavMenu}><i className="material-icons">menu</i></button>
+        </div>
+        <div className={`${styles.links} ${navmenuOpen ? styles["links--show"] : ""}`}>
+          <span className={`cursor-pointer ${styles["close"]}`} onClick={toggleNavMenu}><i className="material-icons">close</i></span>
+          {navLinks.map(link => (
+            <a key={link.label} onClick={() => handleNavLinkClick(link.link)} target={link.target} rel={link.rel} href={link.extLink}>
+              {link.label}
+            </a>
+          ))}
         </div>
       </div>
 
-      <div className={styles["navigation__button-mobile"]}>
-        <button className={`icon-button icon-button--secondary`} onClick={toggleNavMenu}><i className="material-icons">menu</i></button>
-      </div>
-      <div className={`${styles.links} ${navmenuOpen ? styles["links--show"] : ""}`}>
-        <span className={`cursor-pointer ${styles["close"]}`} onClick={toggleNavMenu}><i className="material-icons">close</i></span>
-        {navLinks.map(link => (
-          <a key={link.label} onClick={() => handleNavLinkClick(link.link)} target={link.target} rel={link.rel} href={link.extLink}>
-            {link.label}
-          </a>
-        ))}
-      </div>
     </div>
   );
 }
