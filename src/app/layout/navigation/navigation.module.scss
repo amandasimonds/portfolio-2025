@@ -104,7 +104,20 @@
         opacity: 0;
     }
 
-    &:hover {
+    @media (pointer: fine) {
+        &:hover {
+            background-image: linear-gradient(45deg, #ff6b6b, #feca57, #48dbfb, #ff9ff3, #54a0ff);
+            animation: gradientShift 1.5s ease infinite;
+
+            &::before {
+                opacity: .4;
+                animation: gradientShift 1.5s ease infinite;
+            }
+        }
+    }
+
+    &:active {
+        transform: scale(0.9);
         background-image: linear-gradient(45deg, #ff6b6b, #feca57, #48dbfb, #ff9ff3, #54a0ff);
         animation: gradientShift 1.5s ease infinite;
 
@@ -114,17 +127,13 @@
         }
     }
 
-    &:active {
-        transform: scale(0.9);
-    }
-
     @media screen and (min-width: $desktop-screen-width-min) {
         order: 1;
     }
 
     @media (prefers-reduced-motion: reduce) {
         animation: none;
-        
+
         &::before {
             animation: none;
         }
@@ -145,9 +154,11 @@
     0% {
         background-position: 0% 50%;
     }
+
     50% {
         background-position: 100% 50%;
     }
+
     100% {
         background-position: 0% 50%;
     }
