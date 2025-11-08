@@ -60,14 +60,9 @@ a {
   &.link {
     font-weight: var(--font-weight-semibold);
     color: var(--color-activation);
-    display: inline-block;
 
     &:hover {
-      @media (pointer: fine) {
-        color: var(--color-activation-hover);
-        transform: translateY(-1px);
-        transition: transform 0.3s ease;
-      }
+      color: var(--color-activation-hover);
     }
   }
 }
