@@ -17,7 +17,7 @@ export default function Navigation() {
     { link: "experience", label: "experience" },
     { link: "work", label: "work" },
     { link: "contact", label: "contact" },
-    { link: "", extLink: "/AmandaSimondsResume2025.pdf", label: "resume", target: "_blank", rel: "noopener noreferrer" },
+    { link: "", extLink: "/AmandaSimondsBrannockResume2025.pdf", label: "resume", target: "_blank", rel: "noopener noreferrer" },
   ];
 
   const [navmenuOpen, setNavMenuOpen] = React.useState(false);

@@ -24,7 +24,7 @@ export default function Header() {
                             <a href="https://www.linkedin.com/in/amandasimonds/" target="_blank">
                                 <i className="fa-brands fa-linkedin"></i>
                             </a>
-                            <a href="/AmandaSimondsResume2025.pdf" target="_blank">
+                            <a href="/AmandaSimondsBrannockResume2025.pdf" target="_blank">
                                 <i className="material-symbols-outlined">demography</i>
                             </a>
                         </div>
