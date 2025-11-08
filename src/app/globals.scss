@@ -60,9 +60,14 @@ a {
   &.link {
     font-weight: var(--font-weight-semibold);
     color: var(--color-activation);
+    display: inline-block;
 
     &:hover {
-      color: var(--color-activation-hover);
+      @media (pointer: fine) {
+        color: var(--color-activation-hover);
+        transform: translateY(-1px);
+        transition: transform 0.3s ease;
+      }
     }
   }
 }
@@ -192,11 +197,11 @@ li {
 }
 
 .chip {
-  background-color: var(--color-primary-20);
+  background-color: var(--color-secondary-40);
   border-radius: 4px;
   font-weight: var(--font-weight-semibold);
-  color: var(--color-primary);
-  padding: 4px 8px;
+  color: var(--color-secondary-10);
+  padding: 2px 6px;
 }
 
 b {

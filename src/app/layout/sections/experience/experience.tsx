@@ -64,7 +64,7 @@ export default function Experience() {
                     {experience.map((item, idx) => (
                         <div key={idx} className={styles.experience__item}>
                             <span className={styles.heading}>
-                                <h3><a href={`https://${item.link}`} target="_blank" rel="noopener noreferrer" className="highlight">{item.company}</a></h3>
+                                <h3><a href={`https://${item.link}`} target="_blank" rel="noopener noreferrer" className="font-bold link">{item.company}</a></h3>
                                 <span className={styles.experience__length}>{item.length}</span>
                             </span>
 
