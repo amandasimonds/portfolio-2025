@@ -5,6 +5,7 @@
     inset: 0;
     pointer-events: none;
     z-index: $z-index-background-layer;
+    will-change: transform;
 
     img {
         position: absolute;

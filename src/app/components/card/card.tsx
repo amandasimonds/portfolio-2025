@@ -1,4 +1,5 @@
 import React from "react";
+import Image from "next/image";
 import styles from "./card.module.scss";
 
 type CardProps = {
@@ -20,7 +21,7 @@ export default function Card({
         <div className={`${styles.card} ${className}`} style={style}>
             {image && (
                 <div className={styles.card__image}>
-                    <img src={image} alt={imageAlt} />
+                    <Image src={image} alt={imageAlt} fill style={{ objectFit: "cover", objectPosition: "top" }} />
                 </div>
             )}
             <div className={styles.card__content}>

@@ -1,5 +1,6 @@
 import { parallaxScroll } from "@/app/utils/utils";
 import { useEffect, useRef } from "react";
+import Image from "next/image";
 import styles from "./branch.module.scss";
 
 type BranchProps = {
@@ -22,9 +23,11 @@ export default function Branch({ style, imageStyles }: BranchProps) {
 
   return (
     <div className={styles.branchContainer} ref={branchGraphic} style={style}>
-      <img
+      <Image
         src="/branch.svg"
         alt="branch graphic by designer amanda simonds"
+        width={356}
+        height={1041}
         className={styles.branch}
         style={imageStyles}
       />

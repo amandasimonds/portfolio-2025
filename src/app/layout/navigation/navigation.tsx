@@ -5,6 +5,7 @@ import styles from "./navigation.module.scss";
 import Scrim from "@/app/components/scrim/scrim";
 import { scrollToSection } from "@/app/utils/utils";
 import { Rubik } from "next/font/google";
+import Image from "next/image";
 
 const rubik = Rubik({
   subsets: ["latin"],
@@ -46,7 +47,7 @@ export default function Navigation() {
       <Scrim onClick={toggleNavMenu} isShowing={navmenuOpen}></Scrim>
       <div className={styles.navigation__left}>
         <a onClick={() => handleNavLinkClick('home')} className={styles.logo}>
-          <i><img src="/header-icon.svg" alt="" /></i>
+          <i><Image src="/header-icon.svg" alt="" width={24} height={24} /></i>
           <div className={styles.logo__text}>
             <span>Amanda</span>
             <span>Simonds</span>

@@ -3,6 +3,7 @@
 import { scrollToSection } from "@/app/utils/utils";
 import styles from "./header.module.scss";
 import React from "react";
+import Image from "next/image";
 
 export default function Header() {
 
@@ -14,7 +15,7 @@ export default function Header() {
                         <h1>Hi, I&apos;m Amanda!</h1>
                         <span className="header-subtitle subtitle accent">UI/UX Designer & Developer</span>
                         <div className={`${styles.header__image} ${styles.header__image__mobile}`}>
-                            <img src="amanda-simonds.jpg" alt="amanda simonds brannock ui/ux designer frontend developer" />
+                            <Image src="/amanda-simonds.jpg" alt="amanda simonds brannock ui/ux designer frontend developer" width={200} height={200} />
                         </div>
                         <p className={styles.header__text__caption}>I build and design exceptional user experiences, that combine well-architected engineering with beautifully intuitive designs.</p>
                         <div className={styles.header__socials}>
@@ -31,7 +32,7 @@ export default function Header() {
 
                     </div>
                     <div className={`${styles.header__image} ${styles.header__image__desktop}`}>
-                        <img src="amanda-simonds.jpg" alt="" />
+                        <Image src="/amanda-simonds.jpg" alt="" width={200} height={200} />
                     </div>
                 </div>
                 <div className={styles.header__ctas}>

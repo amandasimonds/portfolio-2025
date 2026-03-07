@@ -7,7 +7,7 @@ const projects = [
     {
         title: "Mower Masters LLC",
         link: "https://mowermastersllc.com",
-        img: "mower-masters-llc.png",
+        img: "/mower-masters-llc.png",
         description: "React website for a local lawn care business. Designed in Figma and built lightning fast, with SEO to help the business get up and running quickly. After the website went live, Mower Masters was immediately getting calls.",
         skills: [
             "React",
@@ -24,7 +24,7 @@ const projects = [
     {
         title: "Data Platform Prototype",
         link: "https://data-platform-prototype.netlify.app",
-        img: "data-platform-prototype.png",
+        img: "/data-platform-prototype.png",
         description: "Angular high fidelity prototype of a data platform application. I built this prototype for user testing, design feedback, and to be used by product owners to showcase the app workflow. This project marks a turning point in my development as a UIUX Designer/Developer, and the value I bring to design/development teams.",
         skills: [
             "Angular",
@@ -38,7 +38,7 @@ const projects = [
     {
         title: "Climbventures",
         link: "https://climbventures.netlify.app",
-        img: "climbventures.png",
+        img: "/climbventures.png",
         description: "React website concept for booking rock climbing expeditions. I was inspired to create an earthy color scheme that aligned with my interest in nature and rock climbing.",
         skills: [
             "React",
@@ -51,7 +51,7 @@ const projects = [
     {
         title: "Wedding Website",
         link: "https://amanda-and-ben.netlify.app/",
-        img: "wedding-website.png",
+        img: "/wedding-website.png",
         description: "I designed our wedding website in Figma, made the logo from scratch, and built the website with React. I experimented with CSS animations and transitions to make the site feel more dynamic, and used SEO to make it online searchable for our guests.",
         skills: [
             "React",
@@ -68,7 +68,7 @@ const projects = [
     {
         title: "Aurora Component Library",
         link: "https://aurora-ui-kit.netlify.app/",
-        img: "aurora-lib.png",
+        img: "/aurora-lib.png",
         description: "Angular component library, displayed through Storybook. I used Figma in combination with design tokens and Style Dictionary to create the design system. This is the start of a passion project to learn more about design systems, component libraries, and Storybook.",
         skills: [
             "Angular",
@@ -85,7 +85,7 @@ const projects = [
     {
         title: "Genetic Username",
         link: "https://amandasimonds.github.io/genetic-username/",
-        img: "genetic-username.png",
+        img: "/genetic-username.png",
         description: "Username generator inspired by a typo on Reddit, and my desire to do a fun day project building a vanilla JavaScript app.",
         skills: [
             "JavaScript",
