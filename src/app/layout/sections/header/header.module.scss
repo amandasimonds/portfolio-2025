@@ -12,6 +12,7 @@
     height: 80dvh;
     height: 80vh;
     justify-content: center;
+    margin-top: calc(var(--navigation-bar-height) + 24px);
 
     @media screen and (max-width: $mobile-screen-width-max) {
         padding-right: 0;

@@ -5,6 +5,22 @@ import Branch from "@/app/components/branch/branch";
 
 const projects = [
     {
+        title: "SuperMetric",
+        link: "https://supermetric.netlify.app/",
+        img: "/supermetric.png",
+        description: "Working with an educational research leader, and a backend engineer, I led the UXUI design and development of a research collection portal for The Superindentendent Lab. This link will take you to the frontend only demo site that we presented to funders. The full-stack production version is being launched in May 2026.",
+        skills: [
+            "React",
+            "TypeScript",
+            "Sass",
+            "Figma",
+        ],
+        icons: [
+            { type: "github", link: "https://github.com/amandasimonds/supermetric" },
+            { type: "figma", link: "https://www.figma.com/design/MKEg0zR3LchALHHWexUo6y/SuperMetric?node-id=18-420&t=fFK25NoVSn63FbYZ-1" },
+        ]
+    },
+    {
         title: "Mower Masters LLC",
         link: "https://mowermastersllc.com",
         img: "/mower-masters-llc.png",
@@ -81,21 +97,7 @@ const projects = [
             { type: "github", link: "https://github.com/amandasimonds/aurora-component-library" },
             { type: "figma", link: "https://www.figma.com/design/ZabTcaDSrmzP7WdV7xgn8s/Aurora?node-id=63-149&t=R1uRwm1TmoZiEgoW-1" },
         ]
-    },
-    {
-        title: "Genetic Username",
-        link: "https://amandasimonds.github.io/genetic-username/",
-        img: "/genetic-username.png",
-        description: "Username generator inspired by a typo on Reddit, and my desire to do a fun day project building a vanilla JavaScript app.",
-        skills: [
-            "JavaScript",
-            "HTML",
-            "CSS",
-        ],
-        icons: [
-            { type: "github", link: "https://github.com/amandasimonds/genetic-username" },
-        ]
-    },
+    }
 ];
 
 export default function Work() {
